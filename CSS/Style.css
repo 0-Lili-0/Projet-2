@@ -1,0 +1,854 @@
+/* Mise en page générale */
+*{
+    box-sizing: border-box;
+}
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+*{
+    max-width: 1440px;
+}
+/*  header */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 86px;
+}
+main{
+    margin-left: 55px;
+    margin-top: 50px;
+}
+#logo{
+    margin: 34px 60px 0px 70px;
+}
+.menu{
+    font-size: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+#menuHebergement{
+    border-top: #f2f2f2 solid 4px;
+    padding-top: 49px;
+}
+#menuActivites{
+    border-top: #f2f2f2 solid 4px;
+    margin: 0px 50px 60px 60px;
+    padding-top: 49px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+/* effet au survole */
+
+a:hover{
+    color: #0065fc;
+}
+#menuHebergement:hover{
+    border-top: #0065fc solid 4px;
+    padding-top: 49px;
+}
+#menuActivites:hover{
+    border-top: #0065fc solid 4px;
+    padding-top: 49px;
+}
+/* recherche */
+#recherche{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+h1{
+    font-weight: bolder;
+    font-size: 20px;
+}
+#sousTitre{
+  margin: 0px 1px 0px 1px;
+  padding: 0px 0px 0px 0px;
+  font-size: 15px;
+}
+form{
+    display: flex;
+    flex-direction: row;
+    margin: 16px 7px 16px 0px;
+}
+input{
+    border : none;
+}
+#maps{
+    background-color: #f2f2f2;
+    border: #f2f2f2 solid 1px;
+    border-radius: 20px 0px 0px 20px;
+    padding: 17px 20px 17px 20px;
+    color: black;
+    height: 51px;
+    width: 50px;
+}
+#champs{
+    border-radius: 0px 0px 0px 0px;
+    border: #f2f2f2 solid 1px;
+    padding: 18px 71px 19px 18px;
+    color: black;
+    font-size: 13px;
+    font-weight: bolder;
+    height: 51px;
+    width: 200px;
+}
+#bouton{
+    border-radius: 0px 20px 20px 0px;
+    border: #f2f2f2 solid 1px;
+    font-weight: bolder;
+    background: transparent;
+    background-color: #0065fc;
+    color: white;
+    height: 51px;
+    width: 100px;
+}
+#boutonMobil{
+    display: none;
+}
+/* filtre */
+#filtre{
+    display: flex;
+   flex-flow: row nowrap;
+   margin-right: 10px;
+   margin-bottom: 15px;
+   gap: 2%;
+}
+h3{
+    font-size: 13px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+.filtre{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.filtreIcone{
+    position: absolute;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: #deebff;
+    color: #0065fc;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}    
+.filtreTexte{
+    position: relative;
+    border: 2px solid #f2f2f2;
+    color: black;
+    font-weight: bolder;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 30px;
+    margin-right: 20px;
+    padding-right: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    text-indent: 25px;
+    white-space: nowrap;
+}
+
+/* effet au survol des filtres */
+.filtreTexte:hover{
+    background-color: #deebff;
+    color: black;
+    font-weight: bolder;
+}
+
+/* info */
+#info{
+    text-indent: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 1px 40px 1px;
+    font-size: 15px;
+}
+#iconeInfo{
+    color: #0065fc;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #f2f2f2 solid 1px;
+    padding-right: 10px;
+    border-radius: 25px;
+}
+
+/* section bloc hébergement */
+.blocHeberPop{
+    display: flex;
+    flex-flow: row nowrap;
+    padding-right: 2%;
+    gap: 2%;
+}
+.blocHebergement{
+    display: flex;
+    flex-flow: column nowrap;
+    max-height: 50%;
+    max-width: 66%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 1%;
+    margin-right: 1%;
+    order: 1;
+    gap: 2%;
+}
+#titreHebergement{
+    font-size: 20px;
+    width: 100%;
+    margin: 3% 3% 0 3%;
+}
+.ensemblePhotoHebergement{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+.cartePhoto{
+    width: 30%;
+    margin: 2% 1% 2% 1%;
+    padding: 3px 3px 0 3px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px #bbb6b6;
+} 
+.imageHebergement{
+    object-fit: cover;
+    object-position: center;
+    height: 110px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    margin-bottom: 10px;
+}
+.infoPhoto{
+    font-size: 14px;
+    padding: 2% 4%;
+    text-align: start;
+    line-height: 10%;
+}
+.infoPhoto h4{
+    margin-top: 2px;
+}
+#afficher{
+    font-size: 14px;
+    font-weight: bolder;
+    width: 100%;
+    margin-left: 3%;
+}
+/* gestion de la note des hôtels carte Hebergement */
+.etoile{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.etoileBleue{
+    display: flex;
+    flex-flow: row nowrap;
+    color:#0065fc;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+.etoileGrise{
+    display: flex;
+    flex-flow: row nowrap;
+    color: #c6b7b7;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+/* effet au survol carte photo */
+.imageHebergement:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+.infoPhoto:hover{
+    
+    transition: .3s ease-in-out;
+
+}
+.infoPhoto a:hover{
+    color:#0065fc;
+}
+
+/* serction bloc populaire */
+.blocPopulaire{
+    display: flex;
+    flex-flow: column wrap;
+    height: 50%;
+    width: 34%;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding-left: 2%;
+    order: 2;
+}
+#titrePopulaire{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    margin: 6% 0 4% 3%;
+}
+#titrePopulaire h2{
+    font-size: 20px;
+    margin: 0%;
+}
+#titrePopulaire i{
+    padding-right: 50px;
+    font-size: 20px;
+}
+.zonePhotoPopulaire{
+    display: flex;
+    flex-flow: column nowrap;
+    padding-right: 7%;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    
+}
+.cartePhotoPopulaire{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: white;
+    border: #deebff none 2px;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    border-radius: 20px;
+    width: 100%;
+    margin-bottom: 6%;
+}
+.infoPhotoPopulaire{
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 14px;
+    padding: 2% 2% 2% 4%;
+    width: 100%;
+    max-width: 100%;
+}
+.infoPhotoPopulaire h4{
+    padding-right: 25%;
+    margin-bottom: 0;
+    margin-top: 7px;
+    line-height: 15px;
+}
+.infoPhotoPopulaire p{
+    margin-bottom: 5px; 
+}
+.infoPhotoPopulaire{
+    margin-bottom: 5px
+}
+.imagePopulaire{
+    border-radius: 10% 0% 0% 10%;
+    object-fit: cover;
+    object-position: center;
+    height: 150px;
+    width: 250px;
+    max-width: 100%;
+    margin-right: 5%;
+    padding: 3% 3% 1% 3%;
+}
+
+/* effet survole bloc populaire */
+.imagePopulaire:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+.infoPhotoPopulaire:hover{ 
+    transition: .3s ease-in-out;
+}
+.infoPhotoPopulaire a:hover{
+    color:#0065fc;
+}
+
+/* gestion de la note des hôtels carte populaire */
+.etoilePopulaire{
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 30px;
+}
+.etoileBleuePopulaire{
+    display: flex;
+    flex-flow: row nowrap;
+    color:#0065fc;
+}
+.etoileGrisePopulaire{
+    display: flex;
+    flex-flow: row nowrap;
+    color: #c6b7b7;
+}
+
+/* section activités à Marseille */
+
+/* format des photos */
+.grandeImage{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.moyenneImage{
+    height: 190px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.petiteImage{
+    height: 145px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.petiteImage2{
+    height: 160px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.miniImage{
+    height: 125px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px 20px 0px 0px;
+}
+.nomPhoto{
+    font-size: 14px;
+    font-weight: bolder;
+    padding-left: 2%;
+}
+.nomPhotoColonne{
+    font-size: 14px;
+    font-weight: bolder;
+    width: 100%;
+    padding-left: 2%;
+}
+/*mise en page du bloc activité */
+.blocActivités{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-bottom: 3%;
+    margin-right: 2%;
+    max-width: 100%;
+    
+}
+.colonne1{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 20%;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    border-radius: 15px;
+    margin: 0 1%;
+}
+.colonne2{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 25%;
+    margin: 0 auto;
+}
+.moyennePhoto{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    margin-bottom: 10%;
+}
+.miniPhoto{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    
+}
+.colonne3{
+    display: flex;
+    flex-flow: column nowrap;
+    object-fit: cover;
+    object-position: center;
+    width: 20%;
+    background-color: white;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    border-radius: 15px;
+    margin: 0 1%;
+}
+.colonne4{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 25%;
+    margin: 0 1%;  
+}
+.petitePhoto{
+    object-fit: cover;
+    object-position: center ;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    margin-bottom: 5%;
+}
+.petitePhoto2{
+    object-fit: cover;
+    object-position: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 8px 8px 10px #bbb6b6;
+    margin-top: 8%;
+}
+
+/* effet survol des carte activités */
+.grandeImage:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+.moyenneImage:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+.petiteImage:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+.petiteImage2:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+.miniImage:hover{
+    transform: scale(1.2);
+    opacity: 0.9;
+    transition: .3s ease-in-out;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #f2f2f2;
+    padding-bottom: 2%;
+    width: 100%;
+}
+#aPropos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+}
+#nosHebergements{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+#assistance{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+}
+ul{
+    padding-left: 0px;
+}
+li{
+    list-style: none;
+    text-align: start;
+}
+
+/* responsive design */
+
+/* version tablette*/
+@media screen and (min-width:768px) and (max-width:992px){
+    #filtre{
+        flex-flow: row wrap;
+        max-width: 70%;
+    }
+    .blocHeberPop{
+        flex-flow:column nowrap;
+        width: 100%; 
+        margin-right: 2%;
+    }
+    .blocHebergement{
+        max-width: 992px;
+        margin-right: 2%;
+        margin-bottom: 4%;
+    }
+    .blocPopulaire{
+        max-width: 992px;
+        width: 98%;
+        margin-right: 2%;
+    }
+    .blocActivités{
+        flex-flow: row nowrap;
+        margin-right: 4%;
+    }
+   .footer{
+       margin-right:2%;
+   }
+   #nosHebergements{
+       margin-left: 15%;
+   }
+   #assistance{
+       margin-left:15%;
+   }
+}
+
+/* version mobile */
+
+@media screen and (max-width:768px){
+    /* menu */
+    header{
+        flex-flow: column nowrap;
+    }
+    #logo{
+        margin: 20px auto;
+        width: 86px;
+    }
+    header img{
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        margin-left: 0px;
+    }
+    .menu{
+        font-size: 16px;
+        max-width: 100%;
+        width: 100%;
+    }
+    #menuHebergement{     
+        padding-bottom: 10px;
+        margin-bottom: 80px;
+        border-bottom: 4px solid transparent;
+        border-top: none;
+        width: 50%;
+        text-align: center;
+        max-width: 100%;
+    }
+    #menuActivites{
+        margin-bottom: 80px;
+        border-bottom: 4px solid transparent;
+        border-top: none;
+        width: 50%;
+        text-align: center;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* survol menu */
+    a:hover{
+        color: #0065fc;
+    }
+    #menuHebergement:hover{
+        border-top: none;
+        border-bottom: #0065fc solid 4px;
+    }
+    #menuActivites:hover{
+        border-top: none;
+        border-bottom: #0065fc solid 4px;  
+    }
+    /* section recherche */
+    h1{
+        margin-right: 20%;
+        margin-top: 15%;
+        font-size: 21px;
+    }
+    #sousTitre{
+        margin: 0px 1px 15px 1px;
+        font-size: 16px;
+    }
+    #recherche{
+        margin-left: 6%;
+    }
+    form{
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        max-width: 100%;
+    }
+    #maps{
+        margin-right: 0;
+    }
+    #champs{
+        width: 255px;
+        padding: 18px 71px 19px 10px;
+        font-size: 16px;
+    }
+    #bouton{
+        display:none
+    }
+    #boutonMobil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius:15px;
+        border: #f2f2f2 solid 1px;
+        font-weight: bolder;
+        background-color: #0065fc;
+        color: white;
+        height: 51px;
+        width: 15%;
+        margin-left: -10%;
+        margin-right: 0;
+    }
+    /* zone filtre */
+    #filtre{
+        flex-flow: row wrap;
+        max-width: 100%;
+        margin-right: 5%; 
+
+    }
+    #filtre h3{
+        font-size: 18px;
+        margin-right: 50%;
+    }
+    #info{
+        text-indent: 0;
+        align-items: start;
+        font-size: 16px;
+        margin-right: 30%;
+    }
+    #iconeInfo{
+        border-radius: 50%;
+    }
+    #info blockquote{
+        text-align: left;
+    }
+    /* zone hebergement et populaire */
+    .blocHeberPop{
+        flex-flow: column nowrap;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    /* section populaire */
+    .blocPopulaire{
+        order: 1;
+        margin-bottom: 5%;
+        width: 100%;
+        border-radius: 0px;
+    }
+    #titrePopulaire h2{
+        font-size: 24px;
+    }
+    .zonePhotoPopulaire{
+        padding-left: 4%;
+    }
+    /* section hebergement */
+    .blocHebergement{
+        order:2;
+        background-color: white;
+        max-width: 100%;
+        margin-right: 4%;
+        margin-left: 4%;
+    }
+    #titreHebergement{
+        margin-bottom: 5%;
+        margin-left: 0%;
+    }
+    #titreHebergement h2{
+        font-size: 16px;
+    }
+    .ensemblePhotoHebergement{
+        flex-flow: column nowrap;
+        width: 100%;
+        margin-bottom: 7%;
+    }
+    .cartePhoto{
+        width: 100%;
+    }
+    .imageHebergement{
+        height: 120px;
+    }
+    #afficher{
+        font-size: 16px;
+        margin-left: 0%;
+    }
+    /* zone activités a Marseille */
+    .blocActivités{
+        flex-flow: column nowrap;
+        margin-right: 5%;
+        margin-left: 6%;
+    }
+    #titreActivités{
+        margin-left: 4%;
+    }
+    #titreActivités h2{
+        font-size: 24px;
+    }
+    .colonne1{
+        width: 100%;
+        margin-bottom: 5%
+    }
+    .colonne2{
+        width: 100%;
+        margin-bottom: 5%
+    }
+    .colonne3{
+        width: 100%;
+        margin-bottom: 5%
+    }
+    .colonne4{
+        width: 100%;
+        margin-bottom: 5%
+    }
+    .grandeImage{
+        height: 150px;
+    }
+    .moyenneImage{
+        height: 150px;
+    }
+    .miniImage{
+        height: 150px;
+    }
+    .petiteImage{
+        height: 150px;
+    }
+    .petiteImage2{
+        height: 150px;
+    }
+    /* footer */
+    .footer{
+        flex-flow: column nowrap;
+        margin-right: 10%;
+        padding-left: 2%;
+    }
+    #aPropos{
+        margin-left: 3%;
+    }
+    #nosHebergements{
+        margin-left: 3%;
+    }
+    #assistance{
+        margin-left: 3%;
+    }
+    .footer h4{
+        margin-bottom: 3%;
+    }
+    .footer li{
+        margin-bottom: 2%;
+    }
+
+}
+
+    
